@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="onetodo">
+  <!--Form-->
+  <div class="onetodo-form-container">
+    <form
+      class="get-form form-group"
+      [formGroup]="onetodo"
+      (ngSubmit)="getTask($event)"
+    >
+      <h2>Get Todo</h2>
+      <hr />
+      <div>
+        <label class="input-lable" for="">ID</label>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="ID"
+          formControlName="id"
+        />
+      </div>
+      <br />
+      <button class="get-button btn btn-primary">Show</button>
+      <button class="clear-button btn btn-info" (click)="clear($event)">
+        Clear
+      </button>
+    </form>
+  </div>
+  <hr />
+  <!-- Table-->
+  <div *ngIf="todo" class="table-parent-div">
+    <div class="singleTable">
+      <table>
+        <tr>
+          <!-- <th>ID</th>
+          <th>Name</th> -->
+          <th>Task</th>
+          <th>Task Date</th>
+          <th>Task Created Date</th>
+        </tr>
+        <tr>
+          <!-- <td>{{ todo.id }}</td>
+          <td>{{ todo.name }}</td> -->
+          <td>{{ todo.task }}</td>
+          <td>
+            {{ todo.taskDate }}
+          </td>
+          <td>
+            {{ todo.todayDate }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

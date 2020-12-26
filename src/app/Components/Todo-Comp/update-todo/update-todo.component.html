@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="main-div">
+  <!-- form -->
+  <div class="add-todo">
+    <h2>Update Task</h2>
+    <form [formGroup]="updateform" (ngSubmit)="updateTodo()">
+      <label>Task</label>
+      <div>
+        <textarea
+          formControlName="task"
+          class="form-control"
+          cols="25"
+          rows="1"
+          placeholder="Task"
+        ></textarea>
+      </div>
+      <br />
+      <label>Date</label>
+      <div>
+        <input class="form-control" type="date" formControlName="taskdate" />
+      </div>
+      <br />
+      <button class="btn btn-primary btn-block" type="submit">Update</button>
+    </form>
+  </div>
+</div>

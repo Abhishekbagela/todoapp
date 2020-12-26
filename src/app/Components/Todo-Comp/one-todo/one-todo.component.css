@@ -1,0 +1,41 @@
+.onetodo-form-container {
+  height: auto;
+  width: fit-content;
+  margin-left: 35%;
+  margin-top: 50px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px turquoise;
+}
+
+.get-button {
+  margin-left: 20px;
+}
+
+.input-lable {
+  color: brown;
+}
+
+input {
+  width: 100%;
+}
+
+.clear-button {
+  margin-left: 30px;
+}
+
+th,
+tr,
+td {
+  border: 1px solid rgb(245, 73, 42);
+}
+
+table {
+  border: 1px solid rgb(245, 73, 42);
+  width: 600px;
+}
+
+.table-parent-div {
+  background-color: cornsilk;
+}

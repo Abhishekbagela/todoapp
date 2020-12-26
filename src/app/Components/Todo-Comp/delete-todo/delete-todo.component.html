@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="onetodo">
+  <!--Form-->
+  <div class="form-data">
+    <h3>Delete Todo</h3>
+    <hr />
+    <form class="get-form" [formGroup]="deleteForm" (onSubmit)="deleteTask()">
+      <label>ID</label>
+      <div>
+        <input
+          class="form-control"
+          formControlName="id"
+          type="text"
+          placeholder="ID"
+        />
+        <span
+          style="color: red"
+          *ngIf="deleteForm.get('id').hasError('required')"
+          >Enter Id</span
+        >
+      </div>
+      <br />
+      <button
+        [disabled]="!deleteForm.valid"
+        class="delete-button btn btn-danger btn-block"
+      >
+        Delete
+      </button>
+    </form>
+  </div>
+  <hr />
+</div>

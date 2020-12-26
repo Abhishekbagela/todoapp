@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+<div class="app-register">
+  <div class="login-form row justify-content-center">
+    <section class="col-12 col-sm-6 col-md-3">
+      <form
+        class="form-container"
+        [formGroup]="registrationform"
+        (ngSubmit)="register()"
+      >
+        <h3>Sign Up</h3>
+        <hr />
+        <div class="form-group">
+          <label for="">Full Name</label>
+          <div>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Name"
+              formControlName="fullName"
+            />
+            <span
+              style="color: red"
+              *ngIf="registrationform.get('fullName').hasError('required')"
+              >Enter Name</span
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <div>
+            <input
+              class="form-control"
+              type="email"
+              placeholder="Email"
+              formControlName="email"
+            /><span
+              style="color: red"
+              *ngIf="registrationform.get('email').hasError('required')"
+              >Enter Email</span
+            >
+          </div>
+        </div>
+        <div>
+          <label for="">Gender : </label>
+          <label style="margin-left: 20px">Male</label>
+          <input
+            style="margin-left: 5px"
+            type="radio"
+            value="male"
+            name="gender"
+            formControlName="gender"
+          />
+          <label style="margin-left: 20px">Female</label>
+          <input
+            style="margin-left: 5px"
+            type="radio"
+            value="female"
+            name="gender"
+            formControlName="gender"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Date of birth :</label>
+          <div>
+            <input
+              class="form-control"
+              type="date"
+              placeholder="Date of birth"
+              formControlName="dob"
+            />
+            <span
+              style="color: red"
+              *ngIf="registrationform.get('dob').hasError('required')"
+              >Enter DOB</span
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Password :</label>
+          <div>
+            <input
+              class="form-control"
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+            /><span
+              style="color: red"
+              *ngIf="registrationform.get('password').hasError('required')"
+              >Enter Password</span
+            >
+          </div>
+        </div>
+        <div>
+          <button
+            id="btn-submit"
+            type="submit"
+            class="btn btn-primary btn-block"
+            [disabled]="!registrationform.valid"
+          >
+            Registration
+          </button>
+          <br />
+          <p class="login-lable">
+            If already registered?
+            <a routerLink="../login">SignIn</a>
+          </p>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

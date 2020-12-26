@@ -1,0 +1,29 @@
+.main-div {
+  padding: 25px;
+  margin: auto;
+  width: 300px;
+}
+
+.add-todo {
+  height: auto;
+  width: fit-content;
+  margin-left: 35%;
+  margin-top: 50px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px turquoise;
+}
+
+h2 {
+  text-align: center;
+  color: violet;
+}
+
+form {
+  margin: auto;
+}
+
+label {
+  color: black;
+}

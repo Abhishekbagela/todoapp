@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="all-task" *ngIf="todos">
+  <div class="">
+    <table class="table table-hover">
+      <tr>
+        <!-- <th>ID</th> -->
+        <th>Task</th>
+        <th>Task Date</th>
+        <th>Task Added Date</th>
+        <th>Update Task</th>
+        <th>Delete Task</th>
+      </tr>
+      <tr *ngFor="let todo of todos">
+        <!-- <td>{{ todo.id }}</td> -->
+        <td>{{ todo.task }}</td>
+        <td>{{ todo.taskDate }}</td>
+        <td>{{ todo.todayDate }}</td>
+        <td><button class="btn btn-primary">Update</button></td>
+        <td><button class="btn btn-danger" (click)="deleteTodo(todo.id)">Delete</button></td>
+      </tr>
+    </table>
+  </div>
+</div>

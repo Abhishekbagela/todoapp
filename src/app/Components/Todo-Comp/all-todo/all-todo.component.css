@@ -1,0 +1,19 @@
+.all-task {
+  margin-top: 20px;
+  background-color: paleturquoise;
+  padding: 20px;
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
+/* 
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+} */
+
+th {
+  color: blue;
+}

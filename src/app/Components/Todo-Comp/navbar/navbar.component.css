@@ -1,0 +1,23 @@
+.justify-content-end {
+  margin-left: 500px;
+}
+
+li {
+  display: inline;
+  color: darkblue;
+}
+
+a {
+  display: inline;
+  transition: all;
+  font-family: "Architects Daughter", cursive;
+  font-family: "Texturina", serif;
+}
+
+#register-link {
+  color: darkblue;
+}
+
+#login-link {
+  color: darkblue;
+}
